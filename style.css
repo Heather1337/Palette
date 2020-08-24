@@ -1,0 +1,39 @@
+.palette {
+    display: flex;
+    justify-content: center;
+}
+
+.imageUpload {
+    display: flex;
+    justify-content: center;
+}
+
+.color1 {
+    width: 30px;
+    height: 120px;
+    background-color: darkslategray;
+}
+
+.color2 {
+    width: 30px;
+    height: 120px;
+    background-color: dimgray;
+}
+
+.color3 {
+    width: 30px;
+    height: 120px;
+    background-color: darkgray;
+}
+
+.color4 {
+    width: 30px;
+    height: 120px;
+    background-color: darkolivegreen;
+}
+
+.color5 {
+    width: 30px;
+    height: 120px;
+    background-color: antiquewhite;
+}
