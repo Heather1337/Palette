@@ -1,9 +1,15 @@
 //Adding token for generic client dominant colors Ximilar
 //const generic_client_token = "Token:1b6a7d6d2a0595c6e621b1ac31e87961368f499f";
 
-const setColors = function(colorArr) {
+const setColors = function(colorObj) {
     //TODO
-    //Go over colors array
+    let colorsArr = colorObj.rgb_hex_colors;
+    //Set div backgrounds from color arr
+    document.getElementById('color1').style.background = colorsArr[0]
+    document.getElementById('color2').style.background = colorsArr[1]
+    document.getElementById('color3').style.background = colorsArr[2]
+    document.getElementById('color4').style.background = colorsArr[3]
+    document.getElementById('color5').style.background = colorsArr[4]
     //Set each color to the coordinating divs background
 };
 
@@ -19,7 +25,11 @@ let getPallete = function() {
         body: JSON.stringify(data)
       })
       .then(response => response.json())
-      .then(colors => console.log(colors.records[0]._dominant_colors))
+      .then((colors) => {
+        console.log(colors.records[0]._dominant_colors);
+        const colorsObj = colors.records[0]._dominant_colors;
+        setColors(colorsObj);
+      })
       .catch((err) => {
         console.log(err, );
       });
