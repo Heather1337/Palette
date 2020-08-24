@@ -8,32 +8,41 @@
     justify-content: center;
 }
 
+.imagePreview {
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    outline: 2px solid white;
+}
+
 .color1 {
-    width: 30px;
-    height: 120px;
+    width: 60px;
+    height: 240px;
     background-color: darkslategray;
 }
 
 .color2 {
-    width: 30px;
-    height: 120px;
+    width: 60px;
+    height: 240px;
     background-color: dimgray;
 }
 
 .color3 {
-    width: 30px;
-    height: 120px;
+    width: 60px;
+    height: 240px;
     background-color: darkgray;
 }
 
 .color4 {
-    width: 30px;
-    height: 120px;
+    width: 60px;
+    height: 240px;
     background-color: darkolivegreen;
 }
 
 .color5 {
-    width: 30px;
-    height: 120px;
+    width: 60px;
+    height: 240px;
     background-color: antiquewhite;
 }
