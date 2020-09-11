@@ -1,18 +1,19 @@
-//Adding token for generic client dominant colors Ximilar
-//const generic_client_token = "Token:1b6a7d6d2a0595c6e621b1ac31e87961368f499f";
+// import html2canvas from 'html2canvas';
+// //Adding token for generic client dominant colors Ximilar
+// //const generic_client_token = "Token:1b6a7d6d2a0595c6e621b1ac31e87961368f499f";
+// html2canvas(document.querySelector("#paletteImg")).then(canvas => {
+//   document.body.appendChild(canvas)
+// });
 
+
+//Helper function that sets the divs colors from the incoming api call
 const setColors = function(colorObj) {
-    //TODO
     let colorsArr = colorObj.rgb_hex_colors;
-    //Set div backgrounds from color arr
     document.getElementById('color1').style.background = colorsArr[0]
     document.getElementById('color2').style.background = colorsArr[1]
     document.getElementById('color3').style.background = colorsArr[2]
     document.getElementById('color4').style.background = colorsArr[3]
-    document.getElementById('color5').style.background = colorsArr[4]
-    //Set each color to the coordinating divs background
 };
-
 
 //Helper Function to make a Fetch request to the Dominant Colors API to send client image and receive back dominant colors
 let getPallete = function() {
@@ -36,12 +37,22 @@ let getPallete = function() {
     console.log(colors.body);
 }
 
+let data = {
+    'color_names': true,
+    'records': [{
+        '_url': 'https://i.imgur.com/SEGVSWe.jpg'
+    }]  
+};
+
 //Handler for when user uploads an image
 window.addEventListener('load', function() {
     document.querySelector('input[type="file"]').addEventListener('change', function() {
         if (this.files && this.files[0]) {
             var img = document.querySelector('img');  // $('img')[0]
             img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            console.log(img.src)
+            //data.records[0]._url = img.src;
+            //TODO Need to find a way to set URL of uploaded image to send with API call
             img.onload = imageIsLoaded;
             getPallete(img.src)
         }
@@ -55,12 +66,6 @@ function imageIsLoaded() {
   // update width and height ...
 }
 
-const data = {
-  'color_names': true,
-  'records': [{
-      '_url': 'https://i.imgur.com/kg7nc73.jpg'
-  }]  
-};
 
 
 

@@ -8,21 +8,28 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <div class="imageUpload">
-        <input type='file' />
-        <br>
+    <div class="navBar">
+        <div class="navBarTitle">Color Pallete Generator</div>
+        <div class="login">Login</div>
+    </div>
+    <div class="imageContainer">
+    
+        <div class="imagePreview">
+            <img id="myImg" src="" alt="" height=200 width=200>
+        </div>
+
+        <div class="imageUpload">
+            <input type='file' />
+            <br>
+        </div>
+
     </div>
 
-    <div class="imagePreview">
-        <img id="myImg" src="" alt="" height=200 width=200>
-    </div>
-
-   <div class="palette">
+   <div class="palette" id="paletteImg">
        <div class="color" id="color1"></div>
        <div class="color" id="color2"></div>
        <div class="color" id="color3"></div>
        <div class="color" id="color4"></div>
-       <div class="color" id="color5"></div>
    </div>
 </body>
 </html>

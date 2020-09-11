@@ -1,19 +1,32 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid peru;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
 .palette {
     display: flex;
     justify-content: center;
 }
 
+
 .imageUpload {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
 .imagePreview {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
+    box-shadow: beige;
 }
 
 .color {
+    margin-top: 20px;
     outline: 2px solid white;
     width: 60px;
     height: 240px;

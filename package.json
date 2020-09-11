@@ -14,6 +14,7 @@
   "author": "Heather",
   "license": "MIT",
   "dependencies": {
+    "html2canvas": "^1.0.0-rc.7",
     "jquery": "^3.5.1",
     "node-fetch": "^2.6.0"
   }
